@@ -46,13 +46,19 @@ class User extends Authenticatable
     //Relacion de uno a uno
     public function profiles()
     {
-        return $this->hasOne(Profile::class);
+        return $this->hasOne('App\Models\Profile');
     }
 
     //Relacion uno a muchos
     public function orders()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany('App\Models\Order');
+    }
+
+    //Relacion muchos a muchos
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Role');
     }
 
 

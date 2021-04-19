@@ -16,7 +16,12 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->integer('fecha_ped');
+            $table->string('direccion');
+            $table->boolean('pagado');
+            $table->bigInteger('precio');
             $table->string('descripcion', 20);
+
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
