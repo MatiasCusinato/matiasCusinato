@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,13 @@ Route::get('/saludar/{name}/{lastName}', function ($name,$lastName){
     return 'Hola ' . $name . ' ' . $lastName;
 });*/
 
+/*
 Route::get('index',[HomeController::class,'index']);
 Route::get('show',[HomeController::class,'show']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function() {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/
+
+
+Route::resource('items', 'App\Http\Controllers\ItemController');
