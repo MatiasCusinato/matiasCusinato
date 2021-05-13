@@ -5,7 +5,7 @@ use App\Models\Auto;
 use App\Models\Moto;
 use App\Models\User;
 use App\Models\Item;
-
+use App\Models\Player;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\Moto::factory(99)->create();
         \App\Models\User::factory(99)->create();
         \App\Models\Item::factory(50)->create();
+        \App\Models\Player::factory(20)->create();
     }
 }
