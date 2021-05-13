@@ -3,7 +3,7 @@
     @section('contenido')
     <h2>Modificacion de ITEM</h2>
         <br>
-        <form action="/items/{{item->id}}" method="post">
+        <form action="/items/{{$item->id}}" method="post">
             @csrf
             @method('PUT')
             <div class="mb-4">
@@ -38,7 +38,7 @@
             
             <div class="mb-4">
                 <label for="" class="form-label">Total</label>
-                <input type="text" name="total" class="form-control" value="{{$item->Total}}">
+                <input type="text" name="Total" class="form-control" value="{{$item->Total}}">
             </div>
             
             <div class="mb-4">

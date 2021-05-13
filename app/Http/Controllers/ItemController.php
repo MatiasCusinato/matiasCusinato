@@ -83,7 +83,7 @@ class ItemController extends Controller
     public function update(Request $request, $id)
     {
         $item = Item::find($id);
-        
+
         $item->nombre = $request->get('nombre');
         $item->tipo = $request->get('tipo');
         $item->unidad = $request->get('unidad');

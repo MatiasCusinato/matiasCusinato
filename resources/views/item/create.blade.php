@@ -37,7 +37,7 @@
             
             <div class="mb-4">
                 <label for="" class="form-label">Total</label>
-                <input type="text" name="total" class="form-control">
+                <input type="text" name="Total" class="form-control">
             </div>
             
             <div class="mb-4">
